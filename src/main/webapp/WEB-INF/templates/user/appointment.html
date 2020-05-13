@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" th:href="@{/resources/img/favicon.ico}"/>
+    <link rel="stylesheet" th:href="@{/resources/css/style.css}">
+
+    <title>Create appointment</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo"><img th:src="@{/resources/img/logo.png}" alt="Logo"></div>
+            <ul class="navbar">
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+    </div>
+
+    <div class="timetable">
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>TimeFrom</th>
+                <th>TimeTo</th>
+            </tr>
+            <tr th:each="schedule : ${schedules}">
+                <td th:text="${schedule.date}"></td>
+                <td th:text="${schedule.timeFrom}"></td>
+                <td th:text="${schedule.timeTo}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

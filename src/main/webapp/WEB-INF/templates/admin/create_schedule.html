@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" th:href="@{/resources/img/favicon.ico}"/>
+    <link rel="stylesheet" th:href="@{/resources/css/style.css}">
+
+    <title>Add new schedule</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo"><img th:src="@{/resources/img/logo.png}" alt="Logo"></div>
+            <ul class="navbar">
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+    </div>
+
+    <div class="sched_form">
+        <form th:action="@{/admin/create}" method="POST" th:object="${schedule}">
+            <div><input type="text" th:field="*{date}" name="date" placeholder="Date:"></div>
+            <div><input type="text" th:field="*{timeFrom}" name="timeFrom" placeholder="Time from:"></div>
+            <div><input type="text" th:field="*{timeTo}" name="timeTo" placeholder="Time to:"></div>
+            <div><input type="submit" name="sched_submit" value="Create"></div>
+        </form>
+    </div>
+    <div class="back"><a th:href="@{/WEB-INF/templates/admin}">Go back</a></div>
+
+</body>
+</html>

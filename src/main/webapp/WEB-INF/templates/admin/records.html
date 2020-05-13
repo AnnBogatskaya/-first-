@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" th:href="@{/resources/img/favicon.ico}"/>
+    <link rel="stylesheet" th:href="@{/resources/css/style.css}" >
+
+    <title>Records</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo"><img th:src="@{/resources/img/logo.png}" alt="Logo"></div>
+            <ul class="navbar">
+                <li><a th:href="@{/home}">Home</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+    </div>
+    <div class="record_table">
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Patient</th>
+                <th>Time</th>
+                <th>Complaint</th>
+            </tr>
+            <tr th:each="record : ${records}">
+                <td th:text="${record.date}"></td>
+                <td th:text="${record.fullname}"></td>
+                <td th:text="${record.time}"></td>
+                <td th:text="${record.complaint}"></td>
+
+            </tr>
+        </table>
+    </div>
+    <a th:href="@{/admin}">Go back</a>
+</body>
+</html>
