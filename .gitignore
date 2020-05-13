@@ -1,0 +1,10 @@
+.idea
+target/
+!.mvn/wrapper/maven-wrapper.jar
+*.log.*
+*.log
+/logs
+.mvn
+*.jar
+*.war
+out/
