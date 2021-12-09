@@ -37,7 +37,7 @@
         <spring-context.version>5.0.0.RELEASE</spring-context.version>
         <spring-webmvc.version>${spring-context.version}</spring-webmvc.version>
         <javax.servlet-api.version>4.0.0</javax.servlet-api.version>
-        <jackson-databind.version>2.9.2</jackson-databind.version>
+        <jackson-databind.version>2.9.10.8</jackson-databind.version>
         <springfox-swagger2.version>${springfox-swagger-ui.version}</springfox-swagger2.version>
         <springfox-swagger-ui.version>2.7.0</springfox-swagger-ui.version>
         <dozer.version>${dozer-spring.version}</dozer.version>
