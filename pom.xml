@@ -45,7 +45,7 @@
         <slf4j-api.version>1.7.25</slf4j-api.version>
         <log4j-slf4j-impl.version>${log4j-api.version}</log4j-slf4j-impl.version>
         <log4j-api.version>2.9.1</log4j-api.version>
-        <spring-data-jpa.version>2.0.1.RELEASE</spring-data-jpa.version>
+        <spring-data-jpa.version>2.1.0.RELEASE</spring-data-jpa.version>
         <hibernate-core.version>5.2.12.Final</hibernate-core.version>
         <postgresql.version>42.1.4</postgresql.version>
         <spring-security-web.version>${spring-security-config.version}</spring-security-web.version>
